@@ -20,10 +20,10 @@ client.connect(async err => console.log("connected!!",err) ) */
 app.use(cors());// telling express to use the cors middleware
 app.use(express.json())// telling express to accept json in body of POST requests
 
-app.get('/',async (req,res)=>{ // listen to a get request
+/* app.get('/',async (req,res)=>{ // listen to a get request
   const data = await pool.query('SELECT * from computers;')
   res.send(data.rows);
-})
+}) */
 
 app.get('/p/blogs',async (req,res)=>{ // listen to a get request
   const data = await pool.query('SELECT * from blogs;')
